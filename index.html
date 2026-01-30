@@ -258,4 +258,22 @@ function Feature({
   title,
   desc,
   icon,
-}:
+}: {
+  title: string;
+  desc: string;
+  icon: string;
+}) {
+  return (
+    <div className="rounded-2xl border border-white/70 bg-white/55 backdrop-blur p-4 shadow-sm hover:bg-white/70 transition">
+      <div className="flex items-start gap-3">
+        <div className="h-9 w-9 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold shadow-sm">
+          {icon}
+        </div>
+        <div>
+          <div className="font-extrabold text-slate-900">{title}</div>
+          <div className="text-sm text-slate-700 mt-1">{desc}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
